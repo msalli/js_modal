@@ -3,15 +3,25 @@
 <head>
   <title>Build a Modal</title>
   <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 <body>
-  <div class="main">
-    <div class="header-div">
-      <img src="http://www.vogue.com/wp-content/themes/vogue/images/logo_vogue.svg">
+    <div class="header-wrapper">
+      <div class="search-modal-overlay">
+        <span class="close-modal">&times;</span>
+        <form class="search-form">
+          <input type="text" class="search-input" placeholder="Search">
+        </form>
+      </div>
+
+
+      <div class="header-div">
+        <img src="http://www.vogue.com/wp-content/themes/vogue/images/logo_vogue.svg">
+      </div>
     </div>
     <div class="nav">
-      <ul class="nav-menu-item">
+      <ul class="nav-menu-items">
         <li class="nav-item">Fashion</li>
         <li class="nav-item">Beauty</li>
         <li class="nav-item">Culture</li>
@@ -21,17 +31,24 @@
       </ul>
     </div>
 
-    <div class="content-container">
+  <div class="content-container">
+    <div class="content-div">
+      <h4 class="center-y">People said making clothes inside out was not proper. I disagreed, because clothes that are inside out are as beautiful as a cathedral.</h4>
+
     </div>
 
-    <div class="modal-overlay active"></div>
-    <div class="modal">
-      <h1>Seach in this modal</h1>
+    <div class="content-div">
+      <h4 class="center-y">Blah</h4>
     </div>
 
+    <div class="content-div">
+      <button class="buy-button center-y">Buy Now</button>
+    </div>
   </div>
 
 
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>

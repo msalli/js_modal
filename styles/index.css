@@ -80,8 +80,9 @@ body {
   color: #212121;
   font-family: "Didact Gothic", sans-serif; }
 
-.main {
-  background: #f3f3f3; }
+.header-wrapper {
+  position: relative;
+  background: #F9F9F9; }
 
 .header-div {
   width: 660px;
@@ -89,42 +90,73 @@ body {
   padding-top: 50px; }
 
 .nav {
+  position: absolute;
+  width: 100%;
+  top: 210px;
   padding: 15px 0;
-  padding-right: 30px;
   height: 25px;
-  background-color: black; }
-  .nav .nav-menu-item {
-    display: inline-block;
-    cursor: pointer;
-    float: right; }
+  background-color: #ffffff;
+  border-top: 1px solid #F9F9F9; }
+  .nav .nav-menu-items {
+    width: 535px;
+    margin: auto;
+    cursor: pointer; }
   .nav .nav-item {
     display: inline;
     padding: 0 15px;
-    text-transform: uppercase;
-    color: #f3f3f3; }
+    text-transform: uppercase; }
+    .nav .nav-item:hover {
+      color: #FF69B4; }
   .nav .search-link {
     margin-left: 15px; }
 
-.content-container {
-  height: 700px;
-  background-color: #fff; }
-
-.modal-overlay {
+.search-modal-overlay {
   position: absolute;
-  top: 0;
-  bottom: -56px;
-  left: 0;
-  right: 0;
-  background-color: rgba(33, 33, 33, 0.5);
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 33, 33, 0.7);
   display: none; }
+  .search-modal-overlay .close-modal {
+    float: right;
+    padding: 0 20px;
+    color: #F9F9F9;
+    font-size: 40px;
+    cursor: pointer; }
+  .search-modal-overlay .search-form {
+    width: 550px;
+    margin: auto; }
+  .search-modal-overlay .search-input {
+    height: 70px;
+    width: 100%;
+    margin-top: 60px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #F9F9F9;
+    font-size: 30px; }
 
-.active {
-  display: block; }
+.content-container {
+  background-color: #ffffff;
+  padding-top: 60px;
+  font-family: "Lora", serif; }
+  .content-container .content-div {
+    border: 1px solid #212121;
+    height: 300px;
+    width: 20%;
+    padding: 20px;
+    margin: 20px;
+    float: left; }
 
-.modal {
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  top: 10px;
-  background-color: #fff;
-  z-index: 500; }
+.center-y {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.buy-button {
+  padding: 10px 20px;
+  box-shadow: 1px 1px 1px 0 #F9F9F9;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #FF69B4;
+  color: #F9F9F9; }
+  .buy-button:hover {
+    box-shadow: 1px 1px 1px 0 #666666; }
