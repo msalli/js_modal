@@ -85,7 +85,8 @@ body {
   background-color: #F9F9F9; }
 
 .main {
-  position: relative; }
+  position: relative;
+  height: 100%; }
 
 .modal-overlay {
   position: absolute;
