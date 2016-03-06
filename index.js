@@ -1,18 +1,27 @@
 $(document).ready(function() {
 
-  triggerModal();
+  triggerSearchModal();
+  triggerBuyModal();
   hideModal();
   handleOutsideClick();
 
-  function triggerModal() {
+  function triggerSearchModal() {
     $('#search-link').click(function() {
-      $('.search-modal-overlay').fadeIn('fast');
+      $('.modal-overlay').fadeIn('fast');
+    })
+  }
+
+  function triggerBuyModal() {
+    $('.buy-button').click(function() {
+      $('.modal-overlay').fadeIn('fast');
+      $('.modal').fadeIn('fast');
     })
   }
 
   function hideModal() {
     $('.close-modal').click(function() {
-      $('.search-modal-overlay').fadeOut('fast');
+      $('.modal-overlay').fadeOut('fast');
+      $('.modal').fadeOut('fast');
     });
   }
 
@@ -23,7 +32,8 @@ $(document).ready(function() {
       // if the target of click is not the container div
         // and the target is not a descendent of the container dic
       if (!container.is(event.target) && container.has(event.target).length === 0) {
-        $('.search-modal-overlay').fadeOut('fast');
+        $('.modal-overlay').fadeOut('fast');
+        $('.modal').fadeOut('fast');
       }
     })
   }

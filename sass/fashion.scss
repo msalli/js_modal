@@ -1,0 +1,98 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+body {
+  color: $brand-primary;
+  font-family: $font-family-sans-serif;
+  background-color: $gray-1;
+}
+
+.main {
+  position: relative;
+}
+
+.modal-overlay {
+  position: absolute;
+  z-index: $z2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(33,33,33,0.7);
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: $z3;
+  background-color: $blank-slate;
+  border-radius: 2px;
+  width: 500px;
+  height: 300px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  display: none;
+
+  .close-modal {
+    float: right;
+    padding: 0 20px;
+    color: $gray-6;
+    font-size: 40px;
+    cursor: pointer;
+  }
+}
+
+.nav {
+  background-color: $blank-slate;
+  border-top: 1px solid $gray-1;
+  padding: 15px 0;
+  height: 55px;
+
+  .nav-menu-items {
+    width: 535px;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  .nav-item {
+    display: inline;
+    padding: 0 15px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $brand-accent;
+    }
+  }
+}
+
+.content {
+  width: 40%;
+  margin: 60px auto;
+
+  .content-text {
+    margin-top: 20px;
+  }
+
+  .text-opener {
+    font-size: 3em;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+}
+
+
+.buy-button {
+  padding: 10px 20px;
+  box-shadow: 1px 1px 1px 0 $gray-1;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: $button-buy;
+  color: $gray-1;
+
+  &:hover {
+    box-shadow: 1px 1px 1px 0 $gray-6;
+  }
+}
